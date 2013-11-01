@@ -1,0 +1,25 @@
+{
+  "name": "How to find a website",
+  "version": "0.6.1",
+  "description": "How to find the internet",
+  "icons": { "128": "icon.png" },
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [
+    { "matches": ["http://*/*"], "js": ["mappy_content_script.js"] }
+  ],
+  "permissions": [
+    "http://www.fileformat.info/tool/rest/dns.json?q=*",
+    "http://www.geoplugin.net/json.gp?ip=*",
+    "tabs",
+    "https://maps.google.com/*",
+    "https://maps.googleapis.com/*",
+    "geolocation"
+  ],
+  "page_action": {
+      "default_name": "Display Map",
+      "default_icon": "marker.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2//,
+  // "content_security_policy": "default-src 'none'; style-src 'self'; script-src 'self'; connect-src https://maps.googleapis.com; img-src https://maps.google.com"
+}
