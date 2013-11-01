@@ -4,9 +4,9 @@
   "description": "How to find the internet",
   "icons": { "128": "icon.png" },
   "background": { "scripts": ["background.js"] },
-  "content_scripts": [
-    { "matches": ["http://*/*"], "js": ["mappy_content_script.js"] }
-  ],
+  // "content_scripts": [
+  //   { "matches": ["http://*/*"], "js": ["mappy_content_script.js"] }
+  // ],
   "permissions": [
     "http://www.fileformat.info/tool/rest/dns.json?q=*",
     "http://www.geoplugin.net/json.gp?ip=*",
