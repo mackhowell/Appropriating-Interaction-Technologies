@@ -102,7 +102,7 @@ function requestUpdate() {
 function map() {
   var address = chrome.extension.getBackgroundPage().selectedAddress;
   //  var myAddress = chrome.extension.getBackgroundPage().myAddres;
-  console.log('address = ' + address);
+  // console.log('address = ' + address);
   if (address)
     gclient_geocode(address);
 }
