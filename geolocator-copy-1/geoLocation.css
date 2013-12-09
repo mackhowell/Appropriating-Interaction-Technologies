@@ -1,0 +1,39 @@
+
+body {
+	width:520px;
+	height:410px;
+	font-family:helvetica, arial, sans-serif;
+	margin:20px;
+	font-size:90%;
+}
+
+.section-header {
+	background:#ebeff9;
+	border-top:1px solid #b5c7de;
+	font-size:99%;
+	padding:3px 0 2px 5px;
+	font-weight:bold;
+	margin-bottom:1em;
+	margin-top:1em;
+	margin-right:1em;
+}
+
+#map_canvas {
+	width:500px;
+	height:300px;
+}
+
+#latitude, #longitude {
+	padding-top:5px;
+	padding-bottom:5px;
+	float:left;
+	width:170px;
+}
+
+#accuracy {
+	padding-top:5px;
+	padding-bottom:15px;
+	float:right;
+	width:170px;
+	color:#0000FF;
+}

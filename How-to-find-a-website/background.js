@@ -1,7 +1,20 @@
+/////////////////////////////////////////
+// Mack Howell
+// 2014
+/////////////////////////////////////////
+
+var id = "dilnjceabgnibnmlfhmplfpefifolgjc";
+function reloadExtension(id) {
+    chrome.management.setEnabled(id, false, function() {
+        chrome.management.setEnabled(id, true);
+    });
+}
+
 // Global accessor that the popup uses.
 var addresses = {};
 var selectedAddress = null;
 var selectedId = null;
+
 // ------------- Start of IP finder script --------------- //
 var tabToHost = {};
 var hostToIP = {};
@@ -104,4 +117,5 @@ chrome.tabs.onSelectionChanged.addListener(function(tabId, info) {
 // Ensure the current selected tab is set up.
 chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
   updateAddress(tabs[0].id);
+  // chrome.runtime.reload()
 });

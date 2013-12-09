@@ -1,0 +1,15 @@
+{
+  "name": "Geo Location Chrome Extension",
+  "manifest_version": 2,
+  "version":"2.0",
+  "description": "Geo Location Chrome Extension",
+  "browser_action": {
+    "default_icon": "location-24.png",
+	"default_title": "Geo Location",
+    "default_popup": "popup.html"
+  },
+  "icons": { "16": "location-16.png",
+             "48": "location-48.png",
+             "128": "location-128.png" },
+  "permissions": ["geolocation"]
+}

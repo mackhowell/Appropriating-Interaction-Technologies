@@ -1,9 +1,8 @@
-//// Old Geolocation Function
-//   function showLocation(position) {
-//   var latitude = position.coords.latitude;
-//   var longitude = position.coords.longitude;
-//   console.log("Latitude : " + latitude + " Longitude: " + longitude);
-// }
+/////////////////////////////////////////
+// Mack Howell
+// 2014
+/////////////////////////////////////////
+
 //New Geolocation function
 navigator.geolocation.getCurrentPosition(function(position) {
   var myLatitude = (position.coords.latitude);
@@ -30,6 +29,7 @@ function gclient_geocode(address) {
         var json = JSON.parse(request.responseText);
         var latlng = json.results[0].geometry.location;
         latlng = latlng.lat + ',' + latlng.lng;
+        // console.log("latlng = " + latlng);
 
         // var src = "https://maps.google.com/staticmap?center=" + latlng +
         //           "&markers=" + latlng + "&zoom=14" +
@@ -37,7 +37,7 @@ function gclient_geocode(address) {
 
         var src = "https://maps.google.com/maps/api/staticmap?size=512x512&path=color:0xFF33CC|weight:7|" + window.myLatitude + "," + window.myLongitude + "|" + window.tabCoords + "&sensor=false";
         // console.log('Here is the source: ' + src);
-        console.log('My Lat/Long = ' + window.myLatitude + ', ' + window.myLongitude);
+        // console.log('My Lat/Long = ' + window.myLatitude + ', ' + window.myLongitude);
         var map = document.getElementById("map");
 
         map.src = src;
@@ -95,17 +95,23 @@ function requestUpdate() {
     // document.getElementById('host').textContent = host;
     // document.getElementById('ip').textContent = ip;
     // console.log('IP of tab = ' + ip);
-    console.log('Lat/Long of tab = ' + ip);
+    console.log('Lat/Long of tab = ' + tabCoords);
 }
 // ---- End of popup.js from IP script ----
 
 function map() {
   var address = chrome.extension.getBackgroundPage().selectedAddress;
   //  var myAddress = chrome.extension.getBackgroundPage().myAddres;
-  // console.log('address = ' + address);
+  console.log('address = ' + address);
   if (address)
     gclient_geocode(address);
 }
+
+// chrome.pageAction.onClicked.addListener(function(tab) {
+//     // reloadExtension(dilnjceabgnibnmlfhmplfpefifolgjc);
+//     console.log("IM ABOUT TO RELOAD EXTENSION");
+//     chrome.runtime.reload();
+// });
 
 window.onload = map;
 
