@@ -1,7 +1,8 @@
 ENDPOINTS
 <br>
 <br>
-A Chrome Extension that connects me to where those litte packets come from.
+A Chrome Extension that connects you to where those litte packets come from.
+<br>
 <br>
 How to:<br>
 Background script gets Lat / Long of the tab you're on using:<br>
