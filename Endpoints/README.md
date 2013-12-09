@@ -5,13 +5,14 @@ A Chrome Extension that connects you to where those litte packets come from.
 <br>
 <br>
 How to:<br>
-Background script gets Lat / Long of the tab you're on using:<br>
-1. http://www.fileformat.info/tool/rest/dns.json?q= {IP ADDRESS}<br>
-2. http://www.geoplugin.com/ then turns that IP into Lat/Long<br>
+1. Background script gets Lat / Long of the tab you're on using:<br>
+	a. http://www.fileformat.info/tool/rest/dns.json?q= {IP ADDRESS}<br>
+	b. http://www.geoplugin.com/ then turns that IP into Lat/Long<br>
 <br>
-Then in popup.js:<br>
-navigator.geolocation.getCurrentPosition() is used to get your ip address.<br>
+2. Then in popup.js:<br>
+navigator.geolocation.getCurrentPosition() is used to get your Lat/Long.<br>
 <br>
+3.Combine it all together. 
 <br>
 Screenshots!
 <br>
