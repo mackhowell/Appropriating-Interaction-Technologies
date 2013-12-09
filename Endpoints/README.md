@@ -1,0 +1,15 @@
+ENDPOINTS
+
+A pink line connects me and where those packets come from.
+
+![Al Jazeera]( https://raw.github.com/mackhowell/Appropriating-Interaction-Technologies/master/images/hot-to-find-a-website-aljazeera.png)
+
+![Al Jazeera](images/hot-to-find-a-website-aljazeera.png?raw=true)
+
+
+
+![](http://imsky.github.io/holder/images/holder_sky.png)
+
+![Brasil.gov](https://raw.github.com/mackhowell/Appropriating-Interaction-Technologies/master/hot-to-find-a-website-brazil.png)
+![niconico](https://raw.github.com/mackhowell/Appropriating-Interaction-Technologies/master/hot-to-find-a-website-niconico.png)
+![nytimes](https://dl.dropboxusercontent.com/u/25227498/hot-to-find-a-website-nytimes.png)
