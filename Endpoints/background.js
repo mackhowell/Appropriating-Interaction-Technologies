@@ -9,12 +9,10 @@ function reloadExtension(id) {
         chrome.management.setEnabled(id, true);
     });
 }
-
 // Global accessor that the popup uses.
 var addresses = {};
 var selectedAddress = null;
 var selectedId = null;
-
 // ------------- Start of IP finder script --------------- //
 var tabToHost = {};
 var hostToIP = {};
@@ -84,7 +82,7 @@ chrome.windows.getAll({populate: true}, function(windows) {
 // ------------- End of IP finder script --------------- //
 function updateAddress(tabId) {
   chrome.tabs.sendRequest(tabId, {}, function(address) {
-    // console.log('im inside updateAddress. here is the address that was passed: ' + address);
+    console.log('im inside updateAddress. here is the address that was passed: ' + address);
     addresses[tabId] = address;
     if (!address) {
       chrome.pageAction.show(tabId);
@@ -104,6 +102,7 @@ function updateSelected(tabId) {
 chrome.tabs.onUpdated.addListener(function(tabId, change, tab) {
   if (change.status == "complete") {
     updateAddress(tabId);
+    chrome.runtime.reload()
   }
   // From IP Finder script
   // if (changeInfo.status === 'loading' && changeInfo.url) {
@@ -117,5 +116,4 @@ chrome.tabs.onSelectionChanged.addListener(function(tabId, info) {
 // Ensure the current selected tab is set up.
 chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
   updateAddress(tabs[0].id);
-  // chrome.runtime.reload()
 });
