@@ -1,4 +1,4 @@
-~~ENDPOINTS~~
+##ENDPOINTS
 <br>
 <br>
 A Chrome Extension that connects you to where those litte packets come from.
