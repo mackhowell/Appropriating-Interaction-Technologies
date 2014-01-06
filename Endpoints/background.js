@@ -35,14 +35,14 @@ function processUrl(tabId, url) {
                 setPopupInfo(tabId);
                   // ------------- Start of Geoplugin script (turns IP into Lat/Long) ------------- //
                   var IPGeo = new XMLHttpRequest();
-                  IPGeo.open('GET', 'http://www.geoplugin.net/json.gp?ip=' + hostToIP[host], true);
+                  IPGeo.open('GET', 'http://freegeoip.net/json/' + hostToIP[host], true);
                   IPGeo.onload = function() {
                     if (IPGeo.readyState == 4) {
                       // var geopluginLat;
                       // var geopluginLong;
                       var resp = JSON.parse(IPGeo.responseText);
-                      var tabLatBackground = resp.geoplugin_latitude;
-                      var tabLongBackground = resp.geoplugin_longitude;
+                      var tabLatBackground = resp.latitude;
+                      var tabLongBackground = resp.longitude;
                       tabCoordinates = tabLatBackground + ',' + tabLongBackground;
                       //Replace hostToIP array with coordinates instead of IPs
                       hostToIP[host] = tabCoordinates;

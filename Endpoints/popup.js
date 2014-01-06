@@ -75,7 +75,7 @@ function requestUpdate() {
 function map() {
   var address = chrome.extension.getBackgroundPage().selectedAddress;
   //  var myAddress = chrome.extension.getBackgroundPage().myAddres;
-  // console.log('address = ' + address);
+  console.log("selectedAddress = " + selectedAddress);
   if (address)
     drawMap(address);
 }
